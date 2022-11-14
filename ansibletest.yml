@@ -1,0 +1,9 @@
+- name: copy motd
+  hosts: dev-v-marnicolas3-vm
+  become: yes
+  tasks:
+    - name: copy motd file
+      copy:
+        src: files/motd
+        dest: /etc/motd
+        backup: yes
